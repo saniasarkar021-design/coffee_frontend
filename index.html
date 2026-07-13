@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAPTER ONE — Where Every Cup Begins a Story</title>
+    <meta name="description" content="A cinematic luxury café experience weaving story, taste, and atmosphere.">
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-follower" id="cursorFollower"></div>
+
+    <canvas id="mouseGlowCanvas"></canvas>
+
+    <!-- <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div> -->
+
+    <!-- <div class="loader-overlay" id="loader">
+        <div class="loader-content">
+            <span class="loader-logo">CHAPTER ONE</span>
+            <div class="loader-bar-bg">
+                <div class="loader-bar-fill" id="loaderFill"></div>
+            </div>
+            <p class="loader-sub">Brewing the Experience...</p>
+        </div>
+    </div> -->
+
+    <!-- <div class="floating-beans-container" aria-hidden="true">
+        <div class="floating-bean bean-1"></div>
+        <div class="floating-bean bean-2"></div>
+        <div class="floating-bean bean-3"></div>
+        <div class="floating-bean bean-4"></div>
+        <div class="floating-bean bean-5"></div>
+    </div> -->
+
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-brand">
+                <span class="brand-text">CHAPTER ONE</span>
+                <span class="brand-dot">.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#story" class="nav-link">Our Story</a>
+                <a href="#chapters" class="nav-link">Chapters</a>
+                <a href="#signature" class="nav-link">Signature</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <!-- <a href="#reserve" class="nav-link btn-nav">Reserve</a> -->
+            </nav>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-video-wrapper">
+                <video autoplay muted loop playsinline class="hero-video" >
+                    <source src="image/hero.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-content">
+                <p class="hero-pretitle fade-in-up">WELCOME TO THE ANTHOLOGY</p>
+                <h1 class="hero-title fade-in-up">CHAPTER ONE</h1>
+                <p class="hero-tagline"><span id="typingText"></span><span class="cursor-blink">|</span></p>
+
+                <div class="hero-actions fade-in-up">
+                    <a href="#chapters" class="btn btn-primary ripple-btn">
+                        <span>Begin Your Journey</span>
+                        <!-- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg> -->
+                    </a>
+                </div>
+            </div>
+
+            <a href="#story" class="scroll-down-indicator" aria-label="Scroll to Story">
+                <span class="scroll-text">EXPLORE</span>
+                <!-- <div class="scroll-line"></div> -->
+            </a>
+        </section>
+
+        <!-- <div class="section-divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div> -->
+
+        <section class="story-section" id="story">
+            <div class="story-container">
+                <div class="story-grid">
+                    <div class="story-image-col scroll-reveal">
+                        <div class="story-image-wrapper">
+                            <!-- <img src="image/coffee.mp4" alt="Master barista pouring artisan coffee" class="story-img parallax-img"> -->
+                            <video autoplay muted loop playsinline class="story-img parallax-img">
+                                <source src="image/coffee.mp4" type="video/mp4">
+                                Your browser does not support HTML5 video.
+                            </video>
+                            <div class="coffee-stain-overlay" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                    <div class="story-text-col scroll-reveal">
+                        <span class="section-subtitle">PROLOGUE</span>
+                        <h2 class="section-title">The Philosophy of Slow Extraction</h2>
+                        <p class="story-paragraph">
+                            Chapter One was born out of a quiet rebellion against modern velocity. We believe that a
+                            truly extraordinary cup of coffee cannot be rushed—it is cultivated, harvested, roasted, and
+                            extracted with meticulous editorial precision.
+                        </p>
+                        <p class="story-paragraph">
+                            Every single bean is sourced directly from micro-lot farms spanning Ethiopia to Panama,
+                            chosen not just for character, but for narrative. Stepping into our space is stepping
+                            outside of time—where light, aroma, and architecture blend into a singular luxury ritual.
+                        </p>
+                        <div class="story-quote">
+                            <blockquote>"We don't serve drinks. We publish liquid narratives."</blockquote>
+                            <cite>— Founder & Master Roaster</cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div> -->
+
+        <section class="chapters-section" id="chapters">
+            <div class="section-header scroll-reveal">
+                <span class="section-subtitle">THE MENU ANTHOLOGY</span>
+                <h2 class="section-title">Choose Your Chapter</h2>
+                <p class="section-desc">Each beverage is formulated as an exclusive entry in our sensory library.</p>
+            </div>
+
+            <section class="container scroll-reveal">
+                <div class="card">
+                    <div class="image p4"></div>
+                    <h3>Chapter I</h3>
+                    <p class="chapter-sub">Morning Latte</p>
+                    <p>Velvety steamed heirloom milk folded into double-shot Ethiopian Yirgacheffe with notes of
+                        jasmine, bergamot, and floral honey.</p>
+                    <!-- <a href="#reserve">Experience — ₹220</a>
+                    <b href="#reserve">Add to Order</b> -->
+                    <button type="button" class="btn-card primary-btn">Experience — ₹220</button>
+                    <button type="button" class="btn-card secondary-btn">Add to Order</button>
+                </div>
+
+                <div class="card">
+                    <div class="image p5"></div>
+                    <h3>Chapter II</h3>
+                    <p class="chapter-sub">Midnight Espresso</p>
+                    <p>Dark roasted Guatemalan Huehuetenango infused with activated charcoal oil, dark cacao nibs, and a
+                        touch of smoked oak sea salt.</p>
+                    <button type="button" class="btn-card primary-btn">Experience — ₹540</button>
+                    <button type="button" class="btn-card secondary-btn">Add to Order</button>
+                </div>
+
+                <div class="card">
+                    <div class="image p3"></div>
+                    <h3>Chapter III</h3>
+                    <p class="chapter-sub">Rainy Mocha</p>
+                    <p>Single-origin Madagascar 72% dark chocolate melt, infused with Madagascar vanilla bean, espresso,
+                        and steamed oat milk finish.</p>
+                    <button type="button" class="btn-card primary-btn">Experience — ₹180</button>
+                    <button type="button" class="btn-card secondary-btn">Add to Order</button>
+                </div>
+            </section>
+        </section>
+
+        <!-- <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div> -->
+
+        <section class="signature-section" id="signature">
+            <div class="section-header scroll-reveal">
+                <span class="section-subtitle">CURATED EXCLUSIVES</span>
+                <h2 class="section-title">The Signature Collection</h2>
+                <p class="section-desc">Interactive showcase of our most celebrated creations.</p>
+            </div>
+
+            <div class="signature-interactive-container scroll-reveal">
+                <!-- <div class="signature-nav">
+                    <button class="signature-btn active" data-coffee="elixir">
+                        <span class="sig-num">01</span>
+                        <span class="sig-name">Golden Aurelia</span>
+                    </button>
+                    <button class="signature-btn" data-coffee="velvet">
+                        <span class="sig-num">02</span>
+                        <span class="sig-name">Smoked Velvet</span>
+                    </button>
+                    <button class="signature-btn" data-coffee="botanical">
+                        <span class="sig-num">03</span>
+                        <span class="sig-name">Flora Infusion</span>
+                    </button>
+                </div> -->
+
+                <div class="signature-display">
+                    <div class="signature-image-box">
+                        <img id="signatureImg" src="image/i1.jpg" alt="Golden Aurelia Coffee" class="signature-img">
+                        <div class="signature-price-tag" id="signaturePrice">₹546</div>
+                    </div>
+                    <div class="signature-info-box">
+                        <h3 class="signature-title" id="signatureTitle">Golden Aurelia</h3>
+                        <p class="signature-origin" id="signatureOrigin">Origin: Geisha Micro-Lot, Panama</p>
+                        <div class="signature-line"></div>
+                        <p class="signature-desc" id="signatureDesc">
+                            Infused with edible 24k gold leaf, cold-distilled orange blossom water, and slow-drip Panama
+                            Geisha coffee served over a single hand-carved ice sphere.
+                        </p>
+                        <div class="signature-notes">
+                            <span>Notes:</span>
+                            <ul id="signatureNotesList">
+                                <li>White Peach</li>
+                                <li>Jasmine</li>
+                                <li>24K Gold Sparkle</li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-secondary ripple-btn">Add to Order</a>
+                    </div>
+                </div>
+                <br>
+                <div class="signature-display">
+                    <div class="signature-image-box">
+                        <img id="signatureImg" src="image/i2.jpeg" alt="Golden Aurelia Coffee" class="signature-img">
+                        <div class="signature-price-tag" id="signaturePrice">₹685</div>
+                    </div>
+                    <div class="signature-info-box">
+                        <h3 class="signature-title" id="signatureTitle">Smoked Velvet</h3>
+                        <p class="signature-origin" id="signatureOrigin">Origin: Blue Mountain, Jamaica</p>
+                        <div class="signature-line"></div>
+                        <p class="signature-desc" id="signatureDesc">
+                            Cold extraction passed through cherrywood smoke, layered with condensed bourbon-vanilla
+                            cream and sprinkled with smoked cacao dusting.
+                        </p>
+                        <div class="signature-notes">
+                            <span>Notes:</span>
+                            <ul id="signatureNotesList">
+                                <li>Bourbon Vanilla</li>
+                                <li>Oak Smoke</li>
+                                <li>Dark Chocolate</li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-secondary ripple-btn">Add to Order</a>
+                    </div>
+                </div>
+
+
+                <br>
+
+                <div class="signature-display">
+                    <div class="signature-image-box">
+                        <img id="signatureImg" src="image/i3.jpg" alt="Golden Aurelia Coffee" class="signature-img">
+                        <div class="signature-price-tag" id="signaturePrice">₹485</div>
+                    </div>
+                    <div class="signature-info-box">
+                        <h3 class="signature-title" id="signatureTitle">Flora Infusion</h3>
+                        <p class="signature-origin" id="signatureOrigin">Origin: Sidama, Ethiopia</p>
+                        <div class="signature-line"></div>
+                        <p class="signature-desc" id="signatureDesc">
+                            Light roast flash-chilled espresso layered with house-made elderflower reduction, tonic water, and a bouquet of fresh edible flora.
+                        </p>
+                        <div class="signature-notes">
+                            <span>Notes:</span>
+                            <ul id="signatureNotesList">
+                                <li>Elderflower</li>
+                                <li>Citrus Zest</li>
+                                <li>Crisp Tonic</li>
+                            </ul>
+                        </div>
+                        <a class="btn btn-secondary ripple-btn">Add to Order</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div> -->
+
+        <section class="gallery-section" id="gallery">
+            <div class="section-header scroll-reveal">
+                <span class="section-subtitle">VISUAL ARCHIVE</span>
+                <h2 class="section-title">Atmosphere & Detail</h2>
+                <p class="section-desc">An editorial look inside our sanctuary.</p>
+            </div>
+
+            <div class="gallery-grid scroll-reveal">
+                <div class="gallery-item item-large">
+                    <img src="image/interior.jpg" alt="Interior Architecture">
+                    <div class="gallery-overlay">
+                        <span>The Main Sanctuary</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image/brew.png" alt="Coffee Brewing Detail">
+                    <div class="gallery-overlay">
+                        <span>Precision Pour-over</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image/craft.jpg" alt="Barista Crafting Drink">
+                    <div class="gallery-overlay">
+                        <span>Craftsmanship</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="image/beans.webp" alt="Coffee Beans Close Up">
+                    <div class="gallery-overlay">
+                        <span>Panama Micro-lot Beans</span>
+                    </div>
+                </div>
+                <div class="gallery-item item-wide">
+                    <img src="image/lib.jpg" alt="Warm Cozy Seating">
+                    <div class="gallery-overlay">
+                        <span>The Library Corner</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div> -->
+
+        <section class="testimonials-section" id="testimonials">
+            <div class="section-header scroll-reveal">
+                <span class="section-subtitle">CRITICAL ACCLAIM</span>
+                <h2 class="section-title">Voices of Chapter One</h2>
+            </div>
+
+            <div class="testimonial-slider-container scroll-reveal">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card glassmorphism">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-quote">
+                            "Chapter One isn't a coffee shop; it is an architectural ode to quiet luxury. Every detail
+                            feels curated by someone who treats hospitality as fine art."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Aarav Sharma</h4>
+                            <span>Travel Photographer & Blogger</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glassmorphism">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-quote">
+                            "The Midnight Espresso completely redefined my palate. Unbelievable precision, atmosphere,
+                            and warmth. A masterclass in luxury branding."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Aman Singh</h4>
+                            <span>Software Engineer & Coffee Enthusiast</span>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card glassmorphism">
+                        <div class="quote-icon">“</div>
+                        <p class="testimonial-quote">
+                            "An oasis of calm and perfection. The Golden Aurelia experience is something you will
+                            remember for years to come."
+                        </p>
+                        <div class="testimonial-author">
+                            <h4>Aditya Roy</h4>
+                            <span>Freelance Graphic Designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- <div class="section-divider">
+            <div class="divider-line"></div>
+            <div class="divider-diamond"></div>
+            <div class="divider-line"></div>
+        </div> -->
+
+        <!-- <section class="reserve-section" id="reserve">
+            <div class="reserve-container scroll-reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">SECURE YOUR TABLE</span>
+                    <h2 class="section-title">Reserve an Experience</h2>
+                    <p class="section-desc">Limited daily seating to maintain an intimate, tranquil atmosphere.</p>
+                </div>
+
+                <form class="reserve-form glassmorphism" id="reserveForm" onsubmit="return false;">
+                    <div class="form-row">
+                        <div class="floating-input-group">
+                            <input type="text" id="resName" required placeholder=" ">
+                            <label for="resName">Full Name</label>
+                        </div>
+                        <div class="floating-input-group">
+                            <input type="email" id="resEmail" required placeholder=" ">
+                            <label for="resEmail">Email Address</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="floating-input-group">
+                            <input type="date" id="resDate" required placeholder=" ">
+                            <label for="resDate">Preferred Date</label>
+                        </div>
+                        <div class="floating-input-group">
+                            <select id="resGuests" required>
+                                <option value="" disabled selected hidden></option>
+                                <option value="1">1 Guest (Solo Sanctuary)</option>
+                                <option value="2">2 Guests (Chapter Table)</option>
+                                <option value="4">4 Guests (Salon Corner)</option>
+                                <option value="6">Private Tasting (Up to 6)</option>
+                            </select>
+                            <label for="resGuests">Guests</label>
+                        </div>
+                    </div>
+
+                    <div class="floating-input-group">
+                        <textarea id="resNotes" rows="3" placeholder=" "></textarea>
+                        <label for="resNotes">Special Requests or Dietary Requirements</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary ripple-btn btn-full" id="reserveBtn">
+                        <span>Confirm Reservation</span>
+                    </button>
+                    <div id="formFeedback" class="form-feedback"></div>
+                </form>
+            </div>
+        </section> -->
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand-col">
+                <span class="footer-logo">CHAPTER ONE</span>
+                <p class="footer-tagline">Where Every Cup Begins a Story.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.9 6.42 9.35-.09-.78-.17-1.99.04-2.85.19-.78 1.22-5.18 1.22-5.18s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.68 1.33 1.49 0 .91-.58 2.27-.88 3.53-.25 1.05.52 1.91 1.56 1.91 1.87 0 3.31-1.97 3.31-4.82 0-2.52-1.81-4.28-4.4-4.28-3 0-4.76 2.25-4.76 4.57 0 .9.35 1.87.78 2.4.09.1.1.2.07.33-.08.31-.25 1.03-.29 1.17-.05.21-.18.25-.41.15-1.52-.71-2.47-2.93-2.47-4.72 0-3.85 2.8-7.39 8.07-7.39 4.24 0 7.53 3.02 7.53 7.06 0 4.21-2.65 7.6-6.33 7.6-1.24 0-2.4-.64-2.8-1.4l-.76 2.91c-.28 1.06-1.02 2.39-1.52 3.21 1.13.35 2.33.54 3.57.54 5.52 0 10-4.48 10-10S17.52 2 12 2z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Hours</h4>
+                <p>Monday — Friday: 07:00 – 20:00</p>
+                <p>Saturday — Sunday: 08:00 – 21:00</p>
+            </div>
+
+            <div class="footer-links-col">
+                <h4 class="footer-heading">Location</h4>
+                <p>742 Evergreen Atelier Way</p>
+                <p>Design District, NY 10012</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CHAPTER ONE. All Rights Reserved.</p>
+            <button class="back-to-top" id="backToTop" aria-label="Back to top">
+                <span>Top</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 15l-6-6-6 6" />
+                </svg>
+            </button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
