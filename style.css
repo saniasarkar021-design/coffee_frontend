@@ -1,6 +1,4 @@
-/* ==========================================
-   CSS VARIABLES & DESIGN TOKENS
-   ========================================== */
+
 :root {
     --bg-dark-coffee: #231c16;
     --bg-light-coffee: #fadfb0;
@@ -19,9 +17,7 @@
     --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==========================================
-   RESET & BASE STYLES
-   ========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -43,43 +39,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Cursor */
-/* @media (pointer: fine) {
-    body {
-        cursor: none;
-    }
-} */
 
-/* .custom-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-gold);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, background-color 0.3s ease;
-} */
-
-/* .custom-cursor-follower {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 36px;
-    height: 36px;
-    border: 1px solid var(--accent-gold);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: transform 0.25s cubic-bezier(0.1, 1, 0.1, 1);
-    opacity: 0.6;
-} */
-
-/* Background Canvas */
 #mouseGlowCanvas {
     position: fixed;
     top: 0;
@@ -91,24 +51,7 @@ body {
     opacity: 0.8;
 }
 
-/* Scroll Progress Bar */
-/* .scroll-progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: transparent;
-    z-index: 1001;
-} */
 
-/* .scroll-progress-bar {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, var(--accent-gold), var(--accent-beige));
-} */
-
-/* Glassmorphism utility */
 .glassmorphism {
     background: var(--glass-bg);
     backdrop-filter: blur(16px);
@@ -116,105 +59,7 @@ body {
     border: 1px solid var(--border-glass);
 }
 
-/* Loader Screen */
-/* .loader-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: var(--bg-dark-coffee);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.8s ease, visibility 0.8s ease;
-}
 
-.loader-overlay.hidden {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.loader-content {
-    text-align: center;
-}
-
-.loader-logo {
-    font-family: var(--font-heading);
-    font-size: 2.5rem;
-    letter-spacing: 4px;
-    color: var(--accent-gold);
-    display: block;
-    margin-bottom: 20px;
-}
-
-.loader-bar-bg {
-    width: 200px;
-    height: 2px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 0 auto 15px;
-    position: relative;
-    overflow: hidden;
-}
-
-.loader-bar-fill {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0%;
-    background-color: var(--accent-gold);
-    transition: width 0.1s linear;
-}
-
-.loader-sub {
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-} */
-
-/* Floating Beans Container */
-/* .floating-beans-container {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.floating-bean {
-    position: absolute;
-    width: 14px;
-    height: 20px;
-    background-color: #2b1f18;
-    border-radius: 50%;
-    opacity: 0.15;
-    animation: floatAnim 18s infinite linear;
-}
-
-.floating-bean::after {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 45%;
-    width: 2px;
-    height: 60%;
-    background: var(--bg-dark-coffee);
-    border-radius: 50%;
-}
-
-.bean-1 { top: 15%; left: 10%; animation-duration: 22s; }
-.bean-2 { top: 60%; left: 85%; animation-duration: 18s; animation-delay: -5s; }
-.bean-3 { top: 80%; left: 15%; animation-duration: 25s; animation-delay: -2s; }
-.bean-4 { top: 35%; left: 75%; animation-duration: 20s; animation-delay: -10s; }
-.bean-5 { top: 45%; left: 30%; animation-duration: 24s; animation-delay: -7s; }
-
-@keyframes floatAnim {
-    0% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-30px) rotate(180deg); }
-    100% { transform: translateY(0) rotate(360deg); }
-} */
-
-/* Section Common Titles */
 .section-header {
     text-align: center;
     max-width: 700px;
@@ -328,9 +173,7 @@ body {
     }
 }
 
-/* ==========================================
-   NAVIGATION BAR
-   ========================================== */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -443,9 +286,6 @@ body {
     transition: var(--transition-smooth);
 }
 
-/* ==========================================
-   HERO SECTION
-   ========================================== */
 .hero {
     position: relative;
     width: 100%;
@@ -554,9 +394,7 @@ body {
     100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
-/* ==========================================
-   OUR STORY SECTION
-   ========================================== */
+
 .story-section {
     padding: 100px 0;
     position: relative;
@@ -633,9 +471,7 @@ body {
     font-style: normal;
 }
 
-/* ==========================================
-   CHOOSE YOUR CHAPTER (CARD SECTION)
-   ========================================== */
+
 .chapters-section {
     padding: 100px 0;
     position: relative;
@@ -791,9 +627,7 @@ body {
     background-color: var(--accent-gold, #C9A227);
     color: var(--bg-dark-coffee, #0D0A08);
 }
-/* ==========================================
-   SIGNATURE COLLECTION SECTION
-   ========================================== */
+
 .signature-section {
     padding: 100px 0;
     position: relative;
@@ -940,9 +774,7 @@ body {
 .fade-out { opacity: 0; transform: scale(0.98); }
 .fade-in { opacity: 1; transform: scale(1); }
 
-/* ==========================================
-   GALLERY SECTION
-   ========================================== */
+
 .gallery-section {
     padding: 100px 0;
     position: relative;
@@ -1012,9 +844,7 @@ body {
     transform: translateY(0);
 }
 
-/* ==========================================
-   TESTIMONIALS SECTION
-   ========================================== */
+
 .testimonials-section {
     padding: 100px 0;
     position: relative;
@@ -1092,105 +922,7 @@ body {
     transform: scale(1.4);
 }
 
-/* ==========================================
-   RESERVATION SECTION
-   ========================================== */
-/* .reserve-section {
-    padding: 100px 0;
-    position: relative;
-    z-index: 2;
-}
 
-.reserve-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.reserve-form {
-    padding: 50px;
-    border-radius: 8px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.floating-input-group {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.floating-input-group input,
-.floating-input-group select,
-.floating-input-group textarea {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid rgba(201, 162, 39, 0.3);
-    padding: 12px 0;
-    font-size: 0.95rem;
-    color: var(--text-cream);
-    font-family: var(--font-body);
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-.floating-input-group select {
-    cursor: pointer;
-}
-
-.floating-input-group select option {
-    background-color: var(--bg-espresso);
-    color: var(--text-cream);
-}
-
-.floating-input-group label {
-    position: absolute;
-    top: 12px;
-    left: 0;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    pointer-events: none;
-    transition: var(--transition-smooth);
-}
-
-.floating-input-group input:focus ~ label,
-.floating-input-group input:not(:placeholder-shown) ~ label,
-.floating-input-group select:focus ~ label,
-.floating-input-group select:valid ~ label,
-.floating-input-group textarea:focus ~ label,
-.floating-input-group textarea:not(:placeholder-shown) ~ label {
-    top: -16px;
-    font-size: 0.75rem;
-    color: var(--accent-gold);
-    letter-spacing: 1px;
-}
-
-.floating-input-group input:focus,
-.floating-input-group select:focus,
-.floating-input-group textarea:focus {
-    border-bottom-color: var(--accent-gold);
-}
-
-.btn-full {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.form-feedback {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: var(--accent-gold);
-    min-height: 24px;
-} */
-
-/* ==========================================
-   FOOTER
-   ========================================== */
 .footer {
     background: #080605;
     border-top: 1px solid var(--border-glass);
@@ -1282,9 +1014,6 @@ body {
     color: var(--accent-gold);
 }
 
-/* ==========================================
-   SCROLL REVEAL & ANIMATIONS
-   ========================================== */
 .scroll-reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -1295,10 +1024,6 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* ==========================================
-   RESPONSIVE DESIGN
-   ========================================== */
 @media (max-width: 992px) {
     .story-grid, .signature-display {
         grid-template-columns: 1fr;
