@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-// LOADER INITIALIZATION
+    // LOADER INITIALIZATION
 
-       initTypingEffect();
+    initTypingEffect();
 
-// STICKY NAVBAR & SCROLL PROGRESS
+    // STICKY NAVBAR & SCROLL PROGRESS
     const navbar = document.getElementById('navbar');
     const progressBar = document.getElementById('progressBar');
 
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         handleParallax();
     });
 
-// HERO TYPING ANIMATION
+    // HERO TYPING ANIMATION
     function initTypingEffect() {
         const textToType = "Where Every Cup Begins a Story.";
         const typingElement = document.getElementById('typingText');
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         type();
     }
-// MOBILE NAVIGATION TOGGLE
+    // MOBILE NAVIGATION TOGGLE
     const mobileToggle = document.getElementById('mobileToggle');
     const navLinks = document.getElementById('navLinks');
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-//  SCROLL REVEAL OBSERVER
+    //  SCROLL REVEAL OBSERVER
     const revealElements = document.querySelectorAll('.scroll-reveal, .fade-in-up');
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-// PARALLAX EFFECT FOR STORY IMAGE
+    // PARALLAX EFFECT FOR STORY IMAGE
     function handleParallax() {
         const parallaxImg = document.querySelector('.parallax-img');
         if (parallaxImg) {
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-// TESTIMONIAL SLIDER
+    // TESTIMONIAL SLIDER
 
     const track = document.getElementById('testimonialTrack');
     const dots = document.querySelectorAll('.slider-dots .dot');
@@ -108,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
         goToSlide(currentSlide);
     }, 6000);
 
-// BUTTON RIPPLE EFFECT
-    
+    // BUTTON RIPPLE EFFECT
+
     const rippleButtons = document.querySelectorAll('.ripple-btn');
 
     rippleButtons.forEach(button => {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-//  BACK TO TOP BUTTON
+    //  BACK TO TOP BUTTON
     const backToTopBtn = document.getElementById('backToTop');
 
     backToTopBtn.addEventListener('click', () => {
